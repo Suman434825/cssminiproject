@@ -3,13 +3,13 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'PT Serif';
+    font-family: 'PT Serif', serif;
 }
 
 .main_box {
     width: 100vw;
     height: 100vh;
-    background: url('./photo.jpg');
+    background: url('photo.jpg'); /* ✅ photo.jpg same folder me ho */
     background-size: cover;
 }
 
@@ -59,14 +59,13 @@
     margin-top: 50px;
 }
 
-
 .sidebar_menu .menu li {
     margin-top: 6px;
     padding: 10px 20px;
 }
 
 .sidebar_menu .menu i,
-a {
+.sidebar_menu .menu a {   /* ✅ sirf sidebar ke links pe apply hoga */
     text-decoration: none;
     color: white;
     font-size: 30px;
@@ -108,11 +107,11 @@ a {
     transform: scale(1.1);
 }
 
-#check:checked~.sidebar_menu {
+#check:checked ~ .sidebar_menu {
     left: 0;
 }
 
-#check:checked~.btn_one {
+#check:checked ~ .btn_one {
     opacity: 0;
 }
 
@@ -120,7 +119,7 @@ a {
     position: absolute;
     top: 0;
     color: white;
-    margin: a auto;
+    margin: 0 auto;   /* ✅ 'a auto' mistake fixed */
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -158,10 +157,11 @@ a:hover {
     text-decoration: underline;
 }
 
-p:hover{
+p:hover {
     color: rgb(161, 161, 161);
     position: relative;
     transform: scale(1.1);
     transition: .5s;
     cursor: pointer;
 }
+
